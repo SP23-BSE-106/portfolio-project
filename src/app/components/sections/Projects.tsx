@@ -12,7 +12,7 @@ export default function Projects() {
       </div>
       <div className="projects-container">
         <div className="project-card">
-          <img src="/images/Cleveroad.jpg" alt="E-Commerce Website" />
+          <img src="/images/Ecomerce.jpg" alt="E-Commerce Website" />
           <h3>E-Commerce Website</h3>
           <p>Modern online store with product filtering, cart, and payment system.</p>
           <div className="skills">
@@ -21,7 +21,7 @@ export default function Projects() {
             <a href="#">JavaScript</a>
           </div>
           <div className="btns">
-            <a href="#" className="btn"><i className="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/SP23-BSE-106/Clothify" className="btn"><i className="fab fa-github"></i> GitHub</a>
             <a href="#" className="btn"><i className="fas fa-external-link-alt"></i> Live Demo</a>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function Projects() {
             <a href="#">Bootstrap</a>
           </div>
           <div className="btns">
-            <a href="#" className="btn"><i className="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/SP23-BSE-106/portfolio-project" className="btn"><i className="fab fa-github"></i> GitHub</a>
             <a href="#" className="btn"><i className="fas fa-external-link-alt"></i> Live Demo</a>
           </div>
         </div>
@@ -57,16 +57,18 @@ export default function Projects() {
         </div>
 
         <div className="project-card">
-          <img src="/images/WordPress dashboard design concept.jpg" alt="Blog Website" />
-          <h3>Blog Website</h3>
-          <p>Clean and simple blogging platform with markdown support.</p>
+          <img src="/images/uniportal.jpg" alt="Blog Website" />
+          <h3>University Website</h3>
+          <p>Clean and simple University website with course listings and contact form.
+
+          </p>
           <div className="skills">
             <a href="#">HTML</a>
             <a href="#">Tailwind</a>
             <a href="#">JavaScript</a>
           </div>
           <div className="btns">
-            <a href="#" className="btn"><i className="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/SP23-BSE-106/InternshipWEB/tree/b9d02ee87c43d94b0642a01842c4d5f47acb8719/university-portal" className="btn"><i className="fab fa-github"></i> GitHub</a>
             <a href="#" className="btn"><i className="fas fa-external-link-alt"></i> Live Demo</a>
           </div>
         </div>
