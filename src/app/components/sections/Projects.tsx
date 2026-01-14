@@ -21,7 +21,7 @@ export default function Projects() {
             <a href="#">JavaScript</a>
           </div>
           <div className="btns">
-            <a href="https://github.com/SP23-BSE-106/Clothify" className="btn"><i className="fab fa-github"></i> GitHub</a>
+            <a href="#" className="btn"><i className="fab fa-github"></i> GitHub</a>
             <a href="#" className="btn"><i className="fas fa-external-link-alt"></i> Live Demo</a>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function Projects() {
             <a href="#">Bootstrap</a>
           </div>
           <div className="btns">
-            <a href="https://github.com/SP23-BSE-106/portfolio-project" className="btn"><i className="fab fa-github"></i> GitHub</a>
+            <a href="" className="btn"><i className="fab fa-github"></i> GitHub</a>
             <a href="#" className="btn"><i className="fas fa-external-link-alt"></i> Live Demo</a>
           </div>
         </div>
@@ -68,7 +68,7 @@ export default function Projects() {
             <a href="#">JavaScript</a>
           </div>
           <div className="btns">
-            <a href="https://github.com/SP23-BSE-106/InternshipWEB/tree/b9d02ee87c43d94b0642a01842c4d5f47acb8719/university-portal" className="btn"><i className="fab fa-github"></i> GitHub</a>
+            <a href="#" className="btn"><i className="fab fa-github"></i> GitHub</a>
             <a href="#" className="btn"><i className="fas fa-external-link-alt"></i> Live Demo</a>
           </div>
         </div>
