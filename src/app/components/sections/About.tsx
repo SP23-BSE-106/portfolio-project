@@ -41,7 +41,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <Image src="/images/img.jpg" alt="Profile" width={400} height={400} />
+        <Image src="/images/img.jpg" alt="Profile" width={400} height={400} className="about-image" />
       </div>
     </section>
   );

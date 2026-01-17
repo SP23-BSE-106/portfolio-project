@@ -226,6 +226,15 @@ hr {
     border: 1px solid black;
 }
 
+.about-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  top: 20px;
+}
+
 .about h2{
     padding-bottom: 30px;
 }
@@ -807,7 +816,7 @@ body {
     gap: 3rem;
   }
 
-  .home img, .about img {
+  .home img, .about img, .about-image {
     width: 100%;
     height: auto;
   }
