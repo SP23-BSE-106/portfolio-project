@@ -1,7 +1,18 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+
+// Type declarations for reCAPTCHA Enterprise
+declare global {
+  interface Window {
+    grecaptcha: {
+      enterprise: {
+        ready: (callback: () => void) => void;
+        execute: (siteKey: string, options: { action: string }) => Promise<string>;
+      };
+    };
+  }
+}
 
 type FormData = {
   name: string;
@@ -21,7 +32,7 @@ export default function Contact() {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
+  // Removed recaptchaRef as we're using Enterprise version
 
   const validate = () => {
     const newErrors: Record<string, string> = {};
@@ -54,16 +65,25 @@ export default function Contact() {
 
     if (!validate()) return;
 
-    const token = recaptchaRef.current?.getValue();
-
-    if (!token) {
-      setErrorMessage('Please complete the reCAPTCHA');
-      return;
-    }
-
     setIsSubmitting(true);
 
     try {
+      // Execute reCAPTCHA Enterprise
+      const token = await new Promise<string>((resolve, reject) => {
+        if (typeof window !== 'undefined' && (window as any).grecaptcha?.enterprise) {
+          (window as any).grecaptcha.enterprise.ready(async () => {
+            try {
+              const token = await (window as any).grecaptcha.enterprise.execute('6LcT2k0sAAAAAIT-mSSaG666AUN3S1O3G_rRUmpo', { action: 'SUBMIT_CONTACT' });
+              resolve(token);
+            } catch (error) {
+              reject(error);
+            }
+          });
+        } else {
+          reject(new Error('reCAPTCHA not loaded'));
+        }
+      });
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -78,11 +98,10 @@ export default function Contact() {
       if (response.ok) {
         setSuccessMessage('Message sent successfully!');
         setFormData({ name: '', email: '', message: '' });
-        recaptchaRef.current?.reset();
       } else {
         setErrorMessage(data.error || 'Failed to send message');
       }
-    } catch {
+    } catch (error) {
       setErrorMessage('An error occurred. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -175,14 +194,7 @@ export default function Contact() {
               )}
             </div>
 
-            <div className="form-group">
-              <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey={
-                  process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || 'test-key'
-                }
-              />
-            </div>
+
 
             <button type="submit" disabled={isSubmitting}>
               {isSubmitting ? 'Sending...' : 'Send Message'}
