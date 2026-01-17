@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function About() {
   return (
     <section className="about" id="about">
@@ -15,11 +17,11 @@ export default function About() {
         <div className="info-about">
           <div className="about-info">
             <p>
-              I'm a creative front-end developer passionate about building modern and responsive web experiences.
+              I&apos;m a creative front-end developer passionate about building modern and responsive web experiences.
               <br />My journey began with a love for design and evolved into a deep curiosity for how the web works combining <br /> logic with creativity to bring ideas to life.
             </p>
             <p>
-              When I'm not coding, I enjoy learning new technologies, improving my projects, <br /> and exploring better ways to make the web faster and more engaging.
+              When I&apos;m not coding, I enjoy learning new technologies, improving my projects, <br /> and exploring better ways to make the web faster and more engaging.
               <br />I believe in continuous learning, attention to detail, and the power of clean, meaningful design
             </p>
           </div>
@@ -39,7 +41,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <img src="/images/img.jpg" alt="" />
+        <Image src="/images/img.jpg" alt="Profile" width={400} height={400} />
       </div>
     </section>
   );

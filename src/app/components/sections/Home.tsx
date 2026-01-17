@@ -10,11 +10,11 @@ const Home = () => {
       <div className="home-container">
         <div className="home-section">
           <div className="info-home">
-            <h1>Hi, I'm Munazza Javed</h1>
+            <h1>Hi, I&apos;m Munazza Javed</h1>
             <h3>Frontend Developer</h3>
             <div className="info-p">
               <p>I create beautiful, functional, and user-centered digital experiences. With </p>
-              <p>2+ years of experiences in Web Development, I bring ideas to life through </p>
+              <p>2+ years of experience in Web Development, I bring ideas to life through </p>
               <p>clean code and thoughtful design</p>
             </div>
             <div className="info-p2">
@@ -39,7 +39,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <Image src="/images/img2.jpg" alt="Profile" width={480} height={480} className="rounded-lg" />
+        <Image src="/images/img2.jpg" alt="Profile" width={600} height={400} className="rounded-lg" />
       </div>
     </section>
   );

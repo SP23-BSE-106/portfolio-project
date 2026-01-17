@@ -1,3 +1,6 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +33,7 @@ header {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 10px 25px;
   border-radius: 25px;
+  overflow-x: auto;
 }
 
 .ul-list li {
@@ -436,6 +440,21 @@ hr {
   }
   .info-home h3 {
     font-size: 20px;
+  }
+
+  /* Header/nav adjustments for small screens */
+  .header-list {
+    margin: 12px 12px;
+  }
+
+  .ul-list {
+    gap: 0.8rem;
+    padding: 8px 12px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ul-list li a {
+    font-size: 0.9rem;
   }
 }
 

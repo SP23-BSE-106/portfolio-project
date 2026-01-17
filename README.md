@@ -59,6 +59,30 @@ npm start
 
 - This project was scaffolded for a portfolio demo. Adjust styles or add components as needed.
 
+## Backend & database (contact form)
+
+This project includes a simple backend API route to accept contact form submissions and store them in MongoDB.
+
+- API endpoint: `POST /api/contact` — accepts JSON { name, email, message } and stores it in the `contacts` collection.
+- API endpoint: `GET /api/contact` — returns recent contact messages (admin use).
+
+Setup:
+
+1. Create an environment file at `.env.local` (do not commit it) using `.env.example` as a template.
+2. Set `MONGODB_URI` to your MongoDB connection string and `MONGODB_DB` to the database name.
+3. Install dependencies and run the app locally:
+
+```bash
+npm install
+npm run dev
+```
+
+Deployment:
+
+- On Vercel, set the `MONGODB_URI` and `MONGODB_DB` environment variables in the project settings. The API routes will run server-side and connect to your MongoDB instance.
+
+Security note: for production, secure your endpoints (rate-limit, captcha, or require an API key) before exposing GET results publicly.
+
 ## License
 
 MIT — feel free to adapt for personal use.

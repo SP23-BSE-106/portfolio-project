@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function Projects() {
   return (
     <section className="project" id="project">
@@ -12,7 +14,7 @@ export default function Projects() {
       </div>
       <div className="projects-container">
         <div className="project-card">
-          <img src="/images/Ecomerce.jpg" alt="E-Commerce Website" />
+          <Image src="/images/Ecomerce.jpg" alt="E-Commerce Website" width={400} height={300} />
           <h3>E-Commerce Website</h3>
           <p>Modern online store with product filtering, cart, and payment system.</p>
           <div className="skills">
@@ -27,7 +29,7 @@ export default function Projects() {
         </div>
 
         <div className="project-card">
-          <img src="/images/portfolio.jpg" alt="Portfolio Website" />
+          <Image src="/images/portfolio.jpg" alt="Portfolio Website" width={400} height={300} />
           <h3>Portfolio Website</h3>
           <p>Personal portfolio to showcase my design and coding projects.</p>
           <div className="skills">
@@ -42,7 +44,7 @@ export default function Projects() {
         </div>
 
         <div className="project-card">
-          <img src="/images/Weather Forecast Dashboard.jpg" alt="Weather App" />
+          <Image src="/images/Weather Forecast Dashboard.jpg" alt="Weather App" width={400} height={300} />
           <h3>Weather App</h3>
           <p>Responsive app showing real-time weather data using API integration.</p>
           <div className="skills">
@@ -57,7 +59,7 @@ export default function Projects() {
         </div>
 
         <div className="project-card">
-          <img src="/images/uniportal.jpg" alt="Blog Website" />
+          <Image src="/images/uniportal.jpg" alt="Blog Website" width={400} height={300} />
           <h3>University Website</h3>
           <p>Clean and simple University website with course listings and contact form.
 
@@ -74,7 +76,7 @@ export default function Projects() {
         </div>
 
         <div className="project-card">
-          <img src="/images/Game Dashboard Design.jpg" alt="Game Landing Page" />
+          <Image src="/images/Game Dashboard Design.jpg" alt="Game Landing Page" width={400} height={300} />
           <h3>Game Landing Page</h3>
           <p>Landing page for a game with animations and parallax effects.</p>
           <div className="skills">
@@ -89,7 +91,7 @@ export default function Projects() {
         </div>
 
         <div className="project-card">
-          <img src="/images/Task manager app.jpg" alt="Task Manager" />
+          <Image src="/images/Task manager app.jpg" alt="Task Manager" width={400} height={300} />
           <h3>Task Manager</h3>
           <p>Task tracking web app with CRUD features and clean UI.</p>
           <div className="skills">

@@ -75,7 +75,7 @@ export default function Home() {
     });
 
     window.addEventListener('scroll', () => {
-      let scrollPos = window.scrollY + 100;
+      const scrollPos = window.scrollY + 100;
 
       sections.forEach(section => {
         const sec = section as HTMLElement;

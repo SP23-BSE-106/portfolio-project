@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Hero() {
   useEffect(() => {
@@ -9,11 +10,11 @@ export default function Hero() {
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    let typingSpeed = 100;
+    const typingSpeed = 100;
 
     function type() {
       const currentWord = words[wordIndex];
-      let displayedText = currentWord.substring(0, charIndex);
+      const displayedText = currentWord.substring(0, charIndex);
 
       if (typingElement) {
         typingElement.innerHTML = displayedText + '<span class="cursor">|</span>';
@@ -44,11 +45,11 @@ export default function Hero() {
       </p>
       <div className="home-container">
         <div className="info-home">
-          <h1>Hi, I'm Munazza Javed</h1>
+          <h1>Hi, I&apos;m Munazza Javed</h1>
           <h3>Frontend Developer</h3>
           <div className="info-p">
-            <p>I create beautiful, function, and user-centerd digital experiences. With </p>
-            <p>2+ years of experiences in web Development, I bring ideas to life through </p>
+            <p>I create beautiful, function, and user-centerd digital experiences. With</p>
+            <p>2+ years of experiences in web Development, I bring ideas to life through</p>
             <p>clean code and thoughtful design</p>
           </div>
           <div className="info-p2">
@@ -72,7 +73,7 @@ export default function Hero() {
             </ul>
           </div>
         </div>
-        <img src="/images/img2.jpg" alt="" />
+        <Image src="/images/img2.jpg" alt="Profile" width={480} height={480} className="rounded-lg" />
       </div>
     </section>
   );

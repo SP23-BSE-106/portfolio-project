@@ -36,7 +36,7 @@ export default function Navbar() {
     });
 
     window.addEventListener('scroll', () => {
-      let scrollPos = window.scrollY + 100;
+      const scrollPos = window.scrollY + 100;
 
       sections.forEach(section => {
         if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
