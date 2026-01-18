@@ -45,7 +45,7 @@ export default function Projects() {
           </div>
           <div className="btns">
             <a href="https://github.com/SP23-BSE-106/portfolio-project" className="btn"><i className="fab fa-github"></i> GitHub</a>
-            <a href="#" className="btn"><i className="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://portfolio-project-git-master-munazza-javeds-projects.vercel.app?_vercel_share=arfrTKEk0ltCoFWHjlaCPKa3kv5MFDd8" className="btn"><i className="fas fa-external-link-alt"></i> Live Demo</a>
           </div>
         </div>
 
