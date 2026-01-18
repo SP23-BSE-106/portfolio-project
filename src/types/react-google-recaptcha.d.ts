@@ -9,7 +9,7 @@ declare module 'react-google-recaptcha' {
     theme?: 'light' | 'dark';
     type?: 'image' | 'audio';
     tabindex?: number;
-    size?: 'compact' | 'normal';
+    size?: 'compact' | 'normal' | 'invisible';
     stoken?: string;
     hl?: string;
     badge?: 'bottomright' | 'bottomleft' | 'inline';
