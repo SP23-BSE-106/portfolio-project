@@ -5,47 +5,25 @@ import getMongoClient from '@/lib/mongodb';
 export const runtime = 'nodejs';
 
 async function verifyRecaptcha(token: string): Promise<boolean> {
-  const secret = process.env.RECAPTCHA_SECRET_KEY;
-  if (!secret) {
-    console.error('RECAPTCHA_SECRET_KEY not set');
-    return false;
-  }
+  const secret = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe'; // Test secret key
 
   try {
-    // For reCAPTCHA Enterprise, we need to use the Enterprise API
-    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-    if (!siteKey) {
-      console.error('NEXT_PUBLIC_RECAPTCHA_SITE_KEY not set');
-      return false;
-    }
-
-    // For reCAPTCHA Enterprise, you need to provide your actual Google Cloud Project ID
-    // This is NOT the same as the site key prefix
-    const projectId = process.env.RECAPTCHA_PROJECT_ID || 'noted-door-474806-b0';
-
-    const response = await fetch(`https://recaptchaenterprise.googleapis.com/v1/projects/${projectId}/assessments?key=${secret}`, {
+    const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        event: {
-          token: token,
-          expectedAction: 'SUBMIT_CONTACT',
-          siteKey: siteKey,
-        },
-      }),
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `secret=${secret}&response=${token}`,
     });
 
     const data = await response.json();
 
-    // Check if the assessment was successful
-    if (data.tokenProperties?.valid && data.riskAnalysis?.score >= 0.5) {
+    if (data.success) {
       return true;
     }
 
-    console.warn('reCAPTCHA Enterprise verification failed:', data);
+    console.warn('reCAPTCHA verification failed:', data);
     return false;
   } catch (error) {
-    console.error('reCAPTCHA Enterprise verification error:', error as Error);
+    console.error('reCAPTCHA verification error:', error as Error);
     return false;
   }
 }

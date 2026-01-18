@@ -1,16 +1,12 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
-// Type declarations for reCAPTCHA Enterprise
+// Type declarations for reCAPTCHA
 declare global {
   interface Window {
-    grecaptcha: {
-      enterprise: {
-        ready: (callback: () => void) => void;
-        execute: (siteKey: string, options: { action: string }) => Promise<string>;
-      };
-    };
+    grecaptcha: any;
   }
 }
 
@@ -32,7 +28,7 @@ export default function Contact() {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  // Removed recaptchaRef as we're using Enterprise version
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const validate = () => {
     const newErrors: Record<string, string> = {};
@@ -68,21 +64,11 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      // Execute reCAPTCHA Enterprise
-      const token = await new Promise<string>((resolve, reject) => {
-        if (typeof window !== 'undefined' && (window as any).grecaptcha?.enterprise) {
-          (window as any).grecaptcha.enterprise.ready(async () => {
-            try {
-              const token = await (window as any).grecaptcha.enterprise.execute('6LcT2k0sAAAAAIT-mSSaG666AUN3S1O3G_rRUmpo', { action: 'SUBMIT_CONTACT' });
-              resolve(token);
-            } catch (error) {
-              reject(error);
-            }
-          });
-        } else {
-          reject(new Error('reCAPTCHA not loaded'));
-        }
-      });
+      // Get reCAPTCHA token
+      const token = await recaptchaRef.current?.executeAsync();
+      if (!token) {
+        throw new Error('reCAPTCHA verification failed');
+      }
 
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -194,7 +180,11 @@ export default function Contact() {
               )}
             </div>
 
-
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+              size="invisible"
+            />
 
             <button type="submit" disabled={isSubmitting}>
               {isSubmitting ? 'Sending...' : 'Send Message'}
