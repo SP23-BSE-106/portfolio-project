@@ -186,7 +186,7 @@ export default function Contact() {
               size={"invisible" as "compact" | "normal" | "invisible"}
             />
 
-            <button type="submit" disabled={isSubmitting}>
+            <button type="submit" disabled={isSubmitting} className="btn-send">
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
 
