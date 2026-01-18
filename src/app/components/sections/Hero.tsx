@@ -57,7 +57,12 @@ export default function Hero() {
             <p><i className="fa-solid fa-briefcase"></i> Available Now</p>
           </div>
           <div className="btnn">
-            <button className="btn-home1"><i className="fa-solid fa-arrow-right"></i> Hire Me</button>
+            <button className="btn-home1" onClick={() => {
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}><i className="fa-solid fa-arrow-right"></i> Hire Me</button>
             <a href="/Munazza.pdf" download="Munazza.pdf" className="btn-home2"><i className="fa-solid fa-download"></i> Download CV</a>
           </div>
           <div className="hhr">
@@ -68,7 +73,9 @@ export default function Hero() {
             <ul>
               <li><a href="https://github.com/SP23-BSE-106"><i className="fa-brands fa-github"></i></a></li>
               <li><a href="https://www.linkedin.com/in/munazza-javed-974b38299"><i className="fa-brands fa-linkedin"></i></a></li>
-              <li><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
+              <li>  <a href="https://wa.me/923205729845" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i className="fa-brands fa-whatsapp"></i>
+          </a></li>
             </ul>
           </div>
         </div>
