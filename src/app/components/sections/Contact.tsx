@@ -183,7 +183,7 @@ export default function Contact() {
             <ReCAPTCHA
               ref={recaptchaRef}
               sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-              size="invisible"
+              size={"invisible" as "compact" | "normal" | "invisible"}
             />
 
             <button type="submit" disabled={isSubmitting}>
