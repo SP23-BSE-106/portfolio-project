@@ -21,9 +21,12 @@ export default function Projects() {
             <a href="#">HTML</a>
             <a href="#">CSS</a>
             <a href="#">JavaScript</a>
+            <a href="#">Next.js</a>
+            <a href="#">MongoDB</a>
+            <a href="#">TypeScript</a>
           </div>
           <div className="btns">
-            <a href="#" className="btn"><i className="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/SP23-BSE-106/Clothify" className="btn"><i className="fab fa-github"></i> GitHub</a>
             <a href="#" className="btn"><i className="fas fa-external-link-alt"></i> Live Demo</a>
           </div>
         </div>
@@ -36,9 +39,12 @@ export default function Projects() {
             <a href="#">HTML</a>
             <a href="#">CSS</a>
             <a href="#">Bootstrap</a>
+            <a href="#">Next.js</a>
+            <a href="#">TypeScript</a>
+            <a href="#">Tailwind CSS</a>
           </div>
           <div className="btns">
-            <a href="" className="btn"><i className="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/SP23-BSE-106/portfolio-project" className="btn"><i className="fab fa-github"></i> GitHub</a>
             <a href="#" className="btn"><i className="fas fa-external-link-alt"></i> Live Demo</a>
           </div>
         </div>
@@ -53,9 +59,12 @@ export default function Projects() {
             <a href="#">HTML</a>
             <a href="#">Tailwind</a>
             <a href="#">JavaScript</a>
+            <a href="#">Next.js</a>
+            <a href="#">MongoDB</a>
+            <a href="#">Node.js</a>
           </div>
           <div className="btns">
-            <a href="#" className="btn"><i className="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/SP23-BSE-106/InternshipWEB/tree/6515ff4303fc2b942ead8ea4ad9f6c8b9d033851/university-portal" className="btn"><i className="fab fa-github"></i> GitHub</a>
             <a href="#" className="btn"><i className="fas fa-external-link-alt"></i> Live Demo</a>
           </div>
         </div>

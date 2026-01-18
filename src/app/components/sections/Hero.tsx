@@ -58,7 +58,7 @@ export default function Hero() {
           </div>
           <div className="btnn">
             <button className="btn-home1"><i className="fa-solid fa-arrow-right"></i> Hire Me</button>
-            <button className="btn-home2"><i className="fa-solid fa-download"></i> Download CV</button>
+            <a href="/Munazza.pdf" download="Munazza.pdf" className="btn-home2"><i className="fa-solid fa-download"></i> Download CV</a>
           </div>
           <div className="hhr">
             <hr />
@@ -67,7 +67,6 @@ export default function Hero() {
             <p className="followw">Follow me:</p>
             <ul>
               <li><a href="https://github.com/SP23-BSE-106"><i className="fa-brands fa-github"></i></a></li>
-              <li><a href="#"><i className="fa-brands fa-discord"></i></a></li>
               <li><a href="https://www.linkedin.com/in/munazza-javed-974b38299"><i className="fa-brands fa-linkedin"></i></a></li>
               <li><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
             </ul>

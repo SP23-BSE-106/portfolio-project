@@ -415,6 +415,30 @@ hr {
   margin: auto;
 }
 
+/* Laptop screens (1024px to 1440px) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .home {
+    margin: 160px 100px;
+  }
+  .home-container {
+    gap: 4rem;
+  }
+  .home img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  .info-home h1 {
+    font-size: 60px;
+  }
+  .info-home h3 {
+    font-size: 35px;
+  }
+}
+
 /* Responsive adjustments for the home section and image */
 @media (max-width: 1000px) {
   .home {
