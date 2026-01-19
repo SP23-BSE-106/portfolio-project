@@ -28,8 +28,8 @@ export default function About() {
           <h2>What Drives Me</h2>
           <div className="card">
             <div className="c1">
-              <h3><i className="fa-solid fa-code"></i> Languoges</h3>
-              <p>HTNL,CSS,JavaScript,Java,C,React</p>
+              <h3><i className="fa-solid fa-code"></i> Languages</h3>
+              <p>HTML,CSS,JavaScript,Java, React,Nextjs,Tailwind Css </p>
             </div>
             <div className="c1">
               <h3><i className="fa-solid fa-graduation-cap"></i> Education</h3>
