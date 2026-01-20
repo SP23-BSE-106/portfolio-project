@@ -73,7 +73,7 @@ export default function Hero() {
             <ul>
               <li><a href="https://github.com/SP23-BSE-106"><i className="fa-brands fa-github"></i></a></li>
               <li><a href="https://www.linkedin.com/in/munazza-javed-974b38299"><i className="fa-brands fa-linkedin"></i></a></li>
-              <li>  <a href="https://wa.me/923205729845" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+             <li>  <a href="https://wa.me/923205729845" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
             <i className="fa-brands fa-whatsapp"></i>
           </a></li>
             </ul>
